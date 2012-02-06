@@ -3,7 +3,7 @@
   "name": "xcom-bootstrap",
   "description": "xcom.me bootstrap toolkit",
   "version": "0.0.0",
-  "homepage": "socialabs.github.com/bootstrap",
+  "homepage": "github.com/socialabs/bootstrap",
   "repository": {
     "type": "git",
     "url": "git@github.com:socialabs/bootstrap.git"
