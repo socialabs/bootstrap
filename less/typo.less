@@ -1,0 +1,41 @@
+/*
+ * Typo
+ */
+.n() {
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+.b() {
+    font-weight: bold;
+}
+.i() {
+    font-style: italic;
+}
+.u() {
+    text-decoration: underline;
+}
+.capitalize() {
+    text-transform: capitalize;
+}
+.uppercase() {
+    text-transform: uppercase;
+}
+.lowercase() {
+    text-transform: lowercase;
+}
+.align(@align: left) {
+    text-align: @align;
+}
+
+
+// CSS3 Content Columns
+.content-columns(@columnCount, @columnGap: 20px) {
+    -webkit-column-count: @columnCount;
+    -moz-column-count: @columnCount;
+    column-count: @columnCount;
+    -webkit-column-gap: @columnGap;
+    -moz-column-gap: @columnGap;
+    column-gap: @columnGap;
+}

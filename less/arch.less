@@ -1,0 +1,117 @@
+/*
+ * Container types
+ */
+.block() {
+    display: block;
+}
+.inline() {
+    display: inline;
+}
+.inline-block() {
+    display: inline-block;
+}
+.none() {
+    display: none;
+}
+.over(@how: auto) {
+    overflow: @how;
+}
+
+
+
+
+/*
+ * Floats
+ */
+.fl(@dir: none) {
+    float: @dir;
+}
+.cl(@dir: both) {
+    clear: @dir;
+}
+.clear() {
+    zoom: 1;
+    &:after {
+        .cl();
+        .block;
+        display: block;
+        content: "";
+        zoom: 1;
+        height: 0;
+        line-height: 0;
+    }
+}
+
+
+
+
+/*
+ * Positioning
+ */
+.pos(@top: none, @bottom: none, @left: none, @right: none) {
+    top: @top;
+    bottom: @bottom;
+    left: @left;
+    right: @right;
+}
+.pos-x-center(@width: 200px) {
+    left: 50%;
+    margin-left: -@width/2;
+}
+.pos-y-center(@height: 200px) {
+    top: 50%;
+    margin-top: -@height/2;
+}
+.pos-center() {
+    margin-left: auto;
+    margin-right: auto;
+}
+.rel(@top: none, @bottom: none, @left: none, @right: none) {
+    position: relative;
+    .pos(@top, @bottom, @left, @right);
+}
+.fix(@top: none, @bottom: none, @left: none, @right: none) {
+    position: fixed;
+    .pos(@top, @bottom, @left, @right);
+}
+.abs(@top: none, @bottom: none, @left: none, @right: none) {
+    position: absolute;
+    .pos(@top, @bottom, @left, @right);
+}
+.z(@index: 1) {
+    z-index: @index;
+}
+
+
+
+
+/*
+ * Dimensions
+ */
+.size(@height: auto, @width: auto) {
+    height: @height;
+    width: @width;
+}
+.square(@size: auto) {
+    .size(@size, @size);
+}
+.min-size(@height: auto,@width: auto) {
+    min-height: @height;
+    min-width: @width;
+}
+.max-size(@height: auto, @width: auto) {
+    max-height: @height;
+    max-width: @width;
+}
+.margin(@top, @right, @bottom, @left) {
+    margin-top: @top;
+    margin-right: @right;
+    margin-bottom: @bottom;
+    margin-left: @left;
+}
+.padding(@top, @right, @bottom, @left) {
+    padding-top: @top;
+    padding-right: @right;
+    padding-bottom: @bottom;
+    padding-left: @left;
+}
