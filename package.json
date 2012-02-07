@@ -2,19 +2,23 @@
   "author": "Socialabs <yuri.komarov@socialabs.com> (socialabs.com)",
   "name": "socialabs-bootstrap",
   "description": "xcom.me bootstrap toolkit",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "homepage": "http://github.com/socialabs/bootstrap",
   "repository": {
     "type": "git",
     "url": "https://ilikefm@github.com/socialabs/bootstrap.git"
   },
   "licenses": [
-  { "type": "MIT"
-  , "url": "https://github.com/socialabs/bootstrap/blob/master/LICENSE"
-  }],
+    {
+      "type": "MIT",
+      "url": "https://github.com/socialabs/bootstrap/blob/master/LICENSE"
+    }
+  ],
   "engines": {
     "node": "~0.6.5"
   },
-  "dependencies": {},
+  "dependencies": {
+    "less" : "https://github.com/cloudhead/less.js/tarball/master"
+  },
   "devDependencies": {}
 }

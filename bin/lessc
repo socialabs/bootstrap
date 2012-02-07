@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+// requires
+var exec = require('child_process').exec;
+var path = require('path');
+var name = require('../package.json')['name'];
+
+// paths calculator
+var absp = function(p) {
+    return path.normalize(path.join(__dirname, p));
+}
+
+
+// get local stuff
+var less_bin = absp('../node_modules/less/bin/lessc');
+var include_dir = absp('../less');
+
+// get args
+var args = process.argv.slice(2);
+
+// command to execute
+var command = 'node ' + less_bin + ' --include-path=' + include_dir + ' ' + args.join(' ');
+
+// exec
+exec(command, function (error, stdout, stderr) {
+  console.log(command);
+  if (error !== null) {
+    console.error(stderr);
+  } else {
+    console.log(stdout);
+  }
+});
