@@ -1,6 +1,12 @@
 /*
- * Shortcuts
+ * Deco
  */
+
+// bg shortcut
+.bg(@color: #000) {
+    background: @color;
+}
+
 // border radius
 .border-radius(@radius: 5px) {
     -webkit-border-radius: @radius;
@@ -15,26 +21,15 @@
     box-shadow: @shadow;
 }
 
-// transitions
-.transition(@transition) {
-    -webkit-transition: @transition;
-    -moz-transition: @transition;
-    -ms-transition: @transition;
-    -o-transition: @transition;
-    transition: @transition;
-}
-
 // background clipping
-.background-clip(@clip) {
+.bg-clip(@clip) {
     -webkit-background-clip: @clip;
     -moz-background-clip: @clip;
     background-clip: @clip;
 }
 
-
-
 // input placeholder text
-.placeholder(@color: @grayLight) {
+.placeholder(@color: #000) {
     :-moz-placeholder {
         color: @color;
     }
@@ -48,44 +43,6 @@
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
 
-
-
-
-/*
- * Font shortcuts
- */
-#font {
-    .shorthand(@weight: normal, @size: 14px, @lineHeight: 20px) {
-        font-size: @size;
-        font-weight: @weight;
-        line-height: @lineHeight;
-    }
-    .sans-serif(@weight: normal, @size: 14px, @lineHeight: 20px) {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: @size;
-        font-weight: @weight;
-        line-height: @lineHeight;
-    }
-    .serif(@weight: normal, @size: 14px, @lineHeight: 20px) {
-        font-family: "Georgia", Times New Roman, Times, serif;
-        font-size: @size;
-        font-weight: @weight;
-        line-height: @lineHeight;
-    }
-    .monospace(@weight: normal, @size: 12px, @lineHeight: 20px) {
-        font-family: "Monaco", Courier New, monospace;
-        font-size: @size;
-        font-weight: @weight;
-        line-height: @lineHeight;
-    }
-}
-
-
-
-
-/*
- * Fills
- */
 // opacity
 .opacity(@opacity: 100) {
     filter: e(%("alpha(opacity=%d)", @opacity));
@@ -161,16 +118,11 @@
     }
 }
 
-// bg shortcut
-.bg(@color: #000) {
-    background: @color;
-}
-
-
-// image decor
+// image passe-partout
 .passepartout(@padding: 2px, @bgcolor: @white, @bordercolor: @gray, @borderadius: 5px) {
     padding: @padding;
     .bg(@bgcolor);
     .border-radius(@borderadius);
     border: 1px solid @bordercolor;
 }
+
