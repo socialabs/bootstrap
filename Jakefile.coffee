@@ -17,8 +17,10 @@ task 'default', (args) ->
 # test
 desc 'Test LESS code'
 task 'test', (args) ->
-    command = "node ./node_modules/less/bin/lessc ./less/#{entry}.less"
+    command = "node ./bin/lessc less/bootstrap.less"
     jake.exec [command], ->
         complete()
     ,
+        stdout: true
+        stderr: true
 
