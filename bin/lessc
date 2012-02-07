@@ -23,10 +23,9 @@ var command = 'node ' + less_bin + ' --include-path=' + include_dir + ' ' + args
 
 // exec
 exec(command, function (error, stdout, stderr) {
-  console.log(command);
-  if (error !== null) {
-    console.error(stderr);
-  } else {
-    console.log(stdout);
-  }
+    if (error !== null) {
+        console.error(stderr);
+    } else {
+        console.log(stdout);
+    }
 });
