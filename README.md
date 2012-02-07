@@ -1,5 +1,6 @@
 This is a set of LESS helpers, used for styling **xcom.me** applications.
 **xcom.me** applications are separate modules which do not depend each other and can use their own CSS code just declaring url to compiled CSS file in `app.json`. **xcom.me** core doesn't know anything about how and where from this file appears. So, as **xcom.me** application developer you can use `bootstrap` or do not — its your own business. But we propose you to use this LESS toolkit.
+Of course, you are welcome to use app outside of **xcom.me**
 
 ### How to install
 
@@ -15,6 +16,6 @@ To add *socialabs bootstrap* source files dir to include path, use `less` compil
 
 `bin/lessc` just wraps native LESS compiler and predefines `--include-path` options so you should just `@import 'bootstrap';` in your LESS and start using bootstrap mixins.
 
+### Browser support
 
-
-
+[A-grade](http://yuilibrary.com/yui/docs/tutorials/gbs/).
