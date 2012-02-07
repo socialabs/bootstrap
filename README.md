@@ -8,7 +8,7 @@ This is a set of LESS helpers, used for styling **xcom.me** applications.
 ## How to use
 
 *socialabs bootstrap* contains LESS files which can be imported to your LESS files.
-All files consists only from paramertric mixins, so `bootstrap` doesn't declare any id's, classnames and doesn't apply any styles to your elements.
+All files consists only from paramertric mixins, so *bootstrap* doesn't declare any id's, classnames and doesn't apply any styles to your elements.
 
 All libraries are collected in `bootstrap.less`.
 To add *socialabs bootstrap* source files dir to include path, use `less` compiler which ships with this application instead of native one.
