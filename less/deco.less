@@ -126,3 +126,21 @@
     border: 1px solid @bordercolor;
 }
 
+// containers
+.container(@padding: 10px, @bgColor: #fff, @borderColor: lighten(#000, 90%), @borderRadius: 5px){
+    // generic properties
+    padding: @padding;
+    background: @bgColor;
+    .border-radius(@borderRadius);
+    border: 1px solid @borderColor;
+
+    // childs
+    > h1:first-child {
+        .b();
+        .bg(lighten(@grayLighter, 5));
+        .margin(-@padding, -@padding, @padding, -@padding);
+        padding: @padding;
+        font-size: 1.1em;
+        line-height: 1.2;
+    }
+}
